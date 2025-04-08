@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function mostrarFormulario() {
+        return view('formulario');
+    }
+    
     public function login(Request $request)
     {
         $credentials = $request->validate([

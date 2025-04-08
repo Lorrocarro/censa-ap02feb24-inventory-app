@@ -1,12 +1,14 @@
-import LoginForm from '../components/auth/login-form';
+import { Head } from "@inertiajs/react";
+import LoginForm from "@/components/auth/LoginForm"; 
+import.meta.glob('./Pages/**/*.{js,jsx}')
 
-export default function Login() {
+
+export default function LoginPage() {
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-                <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Iniciar Sesión</h1>
-                <LoginForm />
-            </div>
-        </div>
+        <>
+            <Head title="Inicio de sesión" />
+            <h1>Login</h1>  
+            <LoginForm />  
+        </>
     );
 }
